@@ -1,0 +1,18 @@
+Prerequisites
+Install Required Libraries
+
+If not already installed, you need to install smtplib and email. These are part of Python's standard library, so no external installation is required.
+Enable Less Secure App Access
+
+Gmail has restricted less secure apps. You'll need to enable access for less secure apps or use an App Password if Two-Factor Authentication (2FA) is enabled.
+To generate an App Password:
+Go to your Google Account → Security → App Passwords → Generate and replace your password with the App Password.
+Correct SMTP Configuration
+
+Gmail SMTP server: smtp.gmail.com.
+Use port 587 for TLS encryption or port 465 for SSL encryption.
+Update server.starttls() to smtplib.SMTP_SSL() for port 465.
+Secure Sensitive Information
+
+Avoid hardcoding credentials like email and password directly in the script.
+Use environment variables or a configuration file.
